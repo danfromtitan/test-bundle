@@ -11,10 +11,11 @@
       <directory>${project.build.directory}</directory>
       <outputDirectory>test/dconstan/</outputDirectory>
       <includes>
+        <include>*.asc</include>
         <include>*.jar</include>
-        <include>*.jar.asc</include>
+        <include>*.md5</include>
         <include>*.pom</include>
-        <include>*.pom.asc</include>
+        <include>*.sha1</include>
       </includes>
     </fileSet>
   </fileSets>
