@@ -9,13 +9,10 @@
   <fileSets>
     <fileSet>
       <directory>${project.build.directory}</directory>
-      <outputDirectory>test/dconstan/</outputDirectory>
+      <outputDirectory>${project.groupId.path}/${project.artifactId}/${project.version}</outputDirectory>
       <includes>
-        <include>*.asc</include>
-        <include>*.jar</include>
-        <include>*.md5</include>
-        <include>*.pom</include>
-        <include>*.sha1</include>
+        <include>**/*.jar*</include>
+        <include>**/*.pom*</include>
       </includes>
     </fileSet>
   </fileSets>
