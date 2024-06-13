@@ -39,7 +39,7 @@
     <tokenAuth>true</tokenAuth>
     <deploymentName>${project.artifactId}-${project.version}</deploymentName>
 
-    <!---
+    <!--
     <publishing.server.id>portal-production</publishing.server.id>
     <centralBaseUrl>https://central.sonatype.com</centralBaseUrl>
 
@@ -49,16 +49,16 @@
 
   </properties>
 
-<distributionManagement>
-<snapshotRepository>
-  <id>ossrh</id>
-  <url>https://hashicorp.oss.sonatype.org/content/repositories/snapshots</url>
-</snapshotRepository>
-<repository>
-  <id>ossrh</id>
-  <url>https://hashicorp.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-</repository>
-</distributionManagement>
+  <distributionManagement>
+  <snapshotRepository>
+    <id>ossrh</id>
+    <url>https://hashicorp.oss.sonatype.org/content/repositories/snapshots</url>
+  </snapshotRepository>
+  <repository>
+    <id>ossrh</id>
+    <url>https://hashicorp.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+  </repository>
+  </distributionManagement>
 
   <build>
     <plugins>
