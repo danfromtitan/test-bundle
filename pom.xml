@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.github.danfromtitan</groupId>
+  <groupId>io.github.dan14all</groupId>
   <artifactId>test-bundle</artifactId>
-  <version>1.0.27</version>
+  <version>1.0.7</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
@@ -39,32 +39,29 @@
     <tokenAuth>true</tokenAuth>
     <deploymentName>${project.artifactId}-${project.version}</deploymentName>
 
+    <!---
     <publishing.server.id>portal-production</publishing.server.id>
     <centralBaseUrl>https://central.sonatype.com</centralBaseUrl>
 
-    <!---
     <publishing.server.id>portal-staging</publishing.server.id>
     <centralBaseUrl>https://staging.portal.central.sonatype.dev</centralBaseUrl>
     -->
 
   </properties>
 
-<!--
 <distributionManagement>
 <snapshotRepository>
   <id>ossrh</id>
-  <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+  <url>https://hashicorp.oss.sonatype.org/content/repositories/snapshots</url>
 </snapshotRepository>
 <repository>
   <id>ossrh</id>
-  <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+  <url>https://hashicorp.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 </repository>
 </distributionManagement>
--->
 
   <build>
     <plugins>
-      <!--
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -72,8 +69,8 @@
         <extensions>true</extensions>
         <configuration>
           <serverId>ossrh</serverId>
-          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          <nexusUrl>https://hashicorp.oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>false</autoReleaseAfterClose>
         </configuration>
         <dependencies>
           <dependency>
@@ -83,7 +80,6 @@
           </dependency>
         </dependencies>
       </plugin>
-      -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -166,7 +162,6 @@
           </execution>
         </executions>
       </plugin>
-      <!--
       <plugin>
         <groupId>net.nicoulaj.maven.plugins</groupId>
         <artifactId>checksum-maven-plugin</artifactId>
@@ -199,6 +194,7 @@
           <csvSummaryFile>artifacts-checksums.csv</csvSummaryFile>
         </configuration>
       </plugin>
+      <!--
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -218,7 +214,6 @@
           </execution>
         </executions>
       </plugin>
-      -->
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
@@ -231,7 +226,7 @@
           <waitUntil>uploaded</waitUntil>
         </configuration>
       </plugin>
-
+      -->
     </plugins>
   </build>
 

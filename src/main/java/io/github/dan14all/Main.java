@@ -1,4 +1,4 @@
-package io.github.danfromtitan;
+package io.github.dan14all;
 
 public class Main {
   public static void main(String[] args) {
