@@ -1,4 +1,4 @@
-package test.dconstan;
+package io.github.danfromtitan;
 
 public class Main {
   public static void main(String[] args) {
