@@ -4,7 +4,7 @@
 
   <groupId>io.github.danfromtitan</groupId>
   <artifactId>test-bundle</artifactId>
-  <version>1.0.31</version>
+  <version>1.0.33</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
@@ -39,12 +39,11 @@
     <tokenAuth>true</tokenAuth>
     <deploymentName>${project.artifactId}-${project.version}</deploymentName>
 
-    <publishing.server.id>portal-develop</publishing.server.id>
-    <centralBaseUrl>https://central.sonatype.dev</centralBaseUrl>
-
-    <!---
     <publishing.server.id>portal-production</publishing.server.id>
     <centralBaseUrl>https://central.sonatype.com</centralBaseUrl>
+    <!---
+    <publishing.server.id>portal-develop</publishing.server.id>
+    <centralBaseUrl>https://central.sonatype.dev</centralBaseUrl>
 
     <publishing.server.id>portal-staging</publishing.server.id>
     <centralBaseUrl>https://staging.portal.central.sonatype.dev</centralBaseUrl>
@@ -228,8 +227,7 @@
         <version>0.5.0</version>
         <extensions>true</extensions>
         <configuration>
-          <publishingServerId>portal-develop</publishingServerId>
-          <tokenAuth>true</tokenAuth>
+          <publishingServerId>portal-production</publishingServerId>
           <autoPublish>true</autoPublish>
           <waitUntil>uploaded</waitUntil>
         </configuration>
