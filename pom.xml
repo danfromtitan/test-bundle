@@ -4,7 +4,7 @@
 
   <groupId>io.github.dan14all</groupId>
   <artifactId>test-bundle</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.7</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
@@ -40,12 +40,12 @@
 
   <distributionManagement>
   <snapshotRepository>
-    <id>ossrh-google</id>
-    <url>https://google.oss.sonatype.org/content/repositories/snapshots</url>
+    <id>ossrh-s01</id>
+    <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
   </snapshotRepository>
   <repository>
-    <id>ossrh-google</id>
-    <url>https://google.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    <id>ossrh-s01</id>
+    <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
   </repository>
   </distributionManagement>
 
