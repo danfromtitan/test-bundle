@@ -41,7 +41,7 @@
   <distributionManagement>
     <snapshotRepository>
       <id>portal-snapshots</id>
-      <url>https://nexus.staging.portal.central.sonatype.dev/repository/maven-snapshots/</url>
+      <url>https://staging.portal.central.sonatype.dev/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
