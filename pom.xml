@@ -41,16 +41,16 @@
   </properties>
 
   <distributionManagement>
+    <!--
     <snapshotRepository>
       <id>staging-snapshots</id>
       <url>https://staging.portal.central.sonatype.dev/repository/maven-snapshots/</url>
     </snapshotRepository>
-    <!--
+    -->
     <snapshotRepository>
       <id>production-snapshots</id>
       <url>https://central.sonatype.com/repository/maven-snapshots/</url>
     </snapshotRepository>
-    -->
 
   </distributionManagement>
 
@@ -193,7 +193,7 @@
         <version>0.7.0</version>
         <extensions>true</extensions>
         <configuration>
-          <publishingServerId>staging-snapshots</publishingServerId>
+          <publishingServerId>production-snapshots</publishingServerId>
           <autoPublish>true</autoPublish>
           <waitUntil>uploaded</waitUntil>
         </configuration>
