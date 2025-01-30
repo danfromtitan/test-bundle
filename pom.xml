@@ -186,7 +186,7 @@
           <csvSummaryFile>artifacts-checksums.csv</csvSummaryFile>
         </configuration>
       </plugin>
-      -->
+
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
@@ -198,6 +198,8 @@
           <waitUntil>uploaded</waitUntil>
         </configuration>
       </plugin>
+      -->
+
     </plugins>
   </build>
 
