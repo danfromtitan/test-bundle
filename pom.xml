@@ -4,7 +4,7 @@
 
   <groupId>io.github.danfromtitan</groupId>
   <artifactId>test-bundle</artifactId>
-  <version>1.0.33</version>
+  <version>1.0.34</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
@@ -36,23 +36,12 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <tokenAuth>true</tokenAuth>
-    <deploymentName>${project.artifactId}-${project.version}</deploymentName>
-
-    <!--
-    <publishing.server.id>portal-production</publishing.server.id>
-    <centralBaseUrl>https://central.sonatype.com</centralBaseUrl>
-
-    <publishing.server.id>portal-staging</publishing.server.id>
-    <centralBaseUrl>https://staging.portal.central.sonatype.dev</centralBaseUrl>
-    -->
-
   </properties>
 
   <distributionManagement>
   <snapshotRepository>
     <id>staging-nxrm2-proxy</id>
-    <url>https://nexus-proxy.staging.portal.central.sonatype.dev/content/repositories/snapshots</url>
+    <url>https://staging.portal.central.sonatype.dev/repository/maven-snapshots/</url>
   </snapshotRepository>
   <repository>
     <id>staging-nxrm2-proxy</id>
@@ -213,17 +202,6 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.sonatype.central</groupId>
-        <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.7.0</version>
-        <extensions>true</extensions>
-        <configuration>
-          <publishingServerId>portal-production</publishingServerId>
-          <autoPublish>true</autoPublish>
-          <waitUntil>uploaded</waitUntil>
-        </configuration>
       </plugin>
       -->
     </plugins>
