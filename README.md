@@ -52,6 +52,7 @@ https://central.sonatype.org/publish/publish-maven/#deployment. To summarize the
   - configure the OSSRH authentication in local _settings.xml_
   - set the property autoReleaseAfterClose to *false* you can manually inspect the staging repository
     in the Nexus Repository Manager
+  - disable _checksum-maven-plugin_
   - disable _maven-assembly-plugin_
   - disable _central-publishing-maven-plugin_
 
@@ -66,3 +67,23 @@ mvn nexus-staging:release
 # also fails with XPP3 pull parser library not present
 mvn nexus-staging:drop
 ```
+
+To deploy using Maven release plugin:
+  - ensure you have a SNAPSHOT version in the pom.xml
+  - disable _nexus-staging-maven-plugin_
+  - disable _checksum-maven-plugin_
+  - disable _maven-assembly-plugin_
+  - enable _maven-release-plugin_
+
+With the SCM connection configured correctly you can perform a release deployment to Portal with:
+```bash
+mvn clean release:clean release:prepare
+```
+
+Answer the prompts for versions and tags, followed by:
+```bash
+mvn release:perform
+```
+
+Note: pushChanges is disabled to avoid pushing the commits to the remote. 
+Make sure to revert the local changes and tag(s) once testing is completed.

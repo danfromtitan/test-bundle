@@ -4,7 +4,7 @@
 
   <groupId>io.github.danfromtitan</groupId>
   <artifactId>test-bundle</artifactId>
-  <version>1.0.34</version>
+  <version>1.0.35</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
@@ -151,6 +151,7 @@
           </execution>
         </executions>
       </plugin>
+      <!--
       <plugin>
         <groupId>net.nicoulaj.maven.plugins</groupId>
         <artifactId>checksum-maven-plugin</artifactId>
@@ -183,7 +184,6 @@
           <csvSummaryFile>artifacts-checksums.csv</csvSummaryFile>
         </configuration>
       </plugin>
-      <!--
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -202,6 +202,23 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>3.1.1</version>
+        <configuration>
+          <dryRun>false</dryRun>
+          <localCheckout>true</localCheckout>
+          <pushChanges>false</pushChanges>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <useReleaseProfile>false</useReleaseProfile>
+          <releaseProfiles>release</releaseProfiles>
+          <goals>deploy</goals>
+          <checkModificationExcludes>
+            <checkModificationExclude>pom.xml</checkModificationExclude>
+          </checkModificationExcludes>
+        </configuration>
       </plugin>
       -->
     </plugins>
