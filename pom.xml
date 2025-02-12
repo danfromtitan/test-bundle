@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.github.dan14all</groupId>
+  <groupId>io.github.danfromtitan</groupId>
   <artifactId>test-bundle</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.33</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
@@ -51,12 +51,12 @@
 
   <distributionManagement>
   <snapshotRepository>
-    <id>ossrh-hashicorp</id>
-    <url>https://hashicorp.oss.sonatype.org/content/repositories/snapshots</url>
+    <id>staging-nxrm2-proxy</id>
+    <url>https://nexus-proxy.staging.portal.central.sonatype.dev/content/repositories/snapshots</url>
   </snapshotRepository>
   <repository>
-    <id>ossrh-hashicorp</id>
-    <url>https://hashicorp.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    <id>staging-nxrm2-proxy</id>
+    <url>https://nexus-proxy.staging.portal.central.sonatype.dev/service/local/staging/deploy/maven2/</url>
   </repository>
   </distributionManagement>
 
@@ -68,8 +68,8 @@
         <version>1.7.0</version>
         <extensions>true</extensions>
         <configuration>
-          <serverId>ossrh-hashicorp</serverId>
-          <nexusUrl>https://hashicorp.oss.sonatype.org/</nexusUrl>
+          <serverId>staging-nxrm2-proxy</serverId>
+          <nexusUrl>https://nexus-proxy.staging.portal.central.sonatype.dev/</nexusUrl>
           <autoReleaseAfterClose>false</autoReleaseAfterClose>
         </configuration>
         <dependencies>
@@ -217,11 +217,10 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.4.0</version>
+        <version>0.7.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>portal-production</publishingServerId>
-          <tokenAuth>true</tokenAuth>
           <autoPublish>true</autoPublish>
           <waitUntil>uploaded</waitUntil>
         </configuration>
