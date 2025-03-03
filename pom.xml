@@ -4,7 +4,7 @@
 
   <groupId>io.github.danfromtitan</groupId>
   <artifactId>test-bundle</artifactId>
-  <version>1.0.47</version>
+  <version>1.0.49</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
