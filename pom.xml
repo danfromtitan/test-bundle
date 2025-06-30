@@ -4,7 +4,7 @@
 
   <groupId>io.github.dan14all</groupId>
   <artifactId>test-bundle</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.7</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
@@ -51,12 +51,12 @@
 
   <distributionManagement>
   <snapshotRepository>
-    <id>ossrh-hashicorp</id>
-    <url>https://hashicorp.oss.sonatype.org/content/repositories/snapshots</url>
+    <id>ossrh-oss</id>
+    <url>https://retired.oss.sonatype.org/content/repositories/snapshots</url>
   </snapshotRepository>
   <repository>
-    <id>ossrh-hashicorp</id>
-    <url>https://hashicorp.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    <id>ossrh-oss</id>
+    <url>https://retired.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
   </repository>
   </distributionManagement>
 
@@ -68,9 +68,9 @@
         <version>1.7.0</version>
         <extensions>true</extensions>
         <configuration>
-          <serverId>ossrh-hashicorp</serverId>
-          <nexusUrl>https://hashicorp.oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>false</autoReleaseAfterClose>
+          <serverId>ossrh-oss</serverId>
+          <nexusUrl>https://retired.oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
         <dependencies>
           <dependency>
