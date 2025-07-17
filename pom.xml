@@ -60,7 +60,7 @@
 
   <build>
     <plugins>
-
+      <!--
       <plugin>
         <artifactId>maven-deploy-plugin</artifactId>
         <version>3.1.3</version>
@@ -74,7 +74,7 @@
           </execution>
         </executions>
       </plugin>
-
+      -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -190,11 +190,11 @@
           <csvSummaryFile>artifacts-checksums.csv</csvSummaryFile>
         </configuration>
       </plugin>
-
+      -->
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.7.0</version>
+        <version>0.8.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>production-snapshots</publishingServerId>
@@ -202,7 +202,7 @@
           <waitUntil>uploaded</waitUntil>
         </configuration>
       </plugin>
-      -->
+
 
     </plugins>
   </build>
