@@ -4,7 +4,7 @@
 
   <groupId>io.github.danfromtitan</groupId>
   <artifactId>test-bundle</artifactId>
-  <version>1.0.86</version>
+  <version>1.0.90</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
@@ -225,7 +225,7 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.7.0</version>
+        <version>0.8.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>portal-staging</publishingServerId>
