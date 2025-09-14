@@ -4,7 +4,10 @@
 
   <groupId>io.github.danfromtitan</groupId>
   <artifactId>test-bundle</artifactId>
-  <version>1.1.1-SNAPSHOT</version>
+  <!-- staging
+  <version>1.0.92-SNAPSHOT</version>
+  -->
+  <version>1.1.22-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
@@ -42,6 +45,10 @@
 
   <distributionManagement>
     <!--
+    <repository>
+      <id>staging-snapshots</id>
+      <url>https://staging.portal.central.sonatype.dev</url>
+    </repository>
     <snapshotRepository>
       <id>staging-snapshots</id>
       <url>https://staging.portal.central.sonatype.dev/repository/maven-snapshots/</url>
@@ -55,12 +62,10 @@
       <id>production-snapshots</id>
       <url>https://central.sonatype.com/repository/maven-snapshots/</url>
     </snapshotRepository>
-
   </distributionManagement>
 
   <build>
     <plugins>
-      <!--
       <plugin>
         <artifactId>maven-deploy-plugin</artifactId>
         <version>3.1.3</version>
@@ -74,7 +79,6 @@
           </execution>
         </executions>
       </plugin>
-      -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -159,51 +163,17 @@
       </plugin>
       <!--
       <plugin>
-        <groupId>net.nicoulaj.maven.plugins</groupId>
-        <artifactId>checksum-maven-plugin</artifactId>
-        <version>1.11</version>
-        <executions>
-          <execution>
-            <id>checksum-maven-plugin-files</id>
-            <phase>package</phase>
-            <goals>
-              <goal>files</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <fileSets>
-            <fileSet>
-              <directory>${project.build.directory}</directory>
-              <includes>
-                <include>**/*.asc</include>
-                <include>**/*.jar</include>
-                <include>**/*.pom</include>
-              </includes>
-            </fileSet>
-          </fileSets>
-          <algorithms>
-            <algorithm>MD5</algorithm>
-            <algorithm>SHA-1</algorithm>
-          </algorithms>
-          <csvSummary>false</csvSummary>
-          <csvSummaryFile>artifacts-checksums.csv</csvSummaryFile>
-        </configuration>
-      </plugin>
-      -->
-      <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
         <version>0.8.0</version>
         <extensions>true</extensions>
         <configuration>
-          <publishingServerId>production-snapshots</publishingServerId>
+          <publishingServerId>staging-snapshots</publishingServerId>
           <autoPublish>true</autoPublish>
           <waitUntil>uploaded</waitUntil>
         </configuration>
       </plugin>
-
-
+      -->
     </plugins>
   </build>
 
