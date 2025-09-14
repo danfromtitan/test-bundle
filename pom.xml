@@ -4,10 +4,7 @@
 
   <groupId>io.github.danfromtitan</groupId>
   <artifactId>test-bundle</artifactId>
-  <!-- staging
-  <version>1.0.92-SNAPSHOT</version>
-  -->
-  <version>1.1.22-SNAPSHOT</version>
+  <version>1.0.97-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
@@ -44,7 +41,6 @@
   </properties>
 
   <distributionManagement>
-    <!--
     <repository>
       <id>staging-snapshots</id>
       <url>https://staging.portal.central.sonatype.dev</url>
@@ -53,7 +49,7 @@
       <id>staging-snapshots</id>
       <url>https://staging.portal.central.sonatype.dev/repository/maven-snapshots/</url>
     </snapshotRepository>
-    -->
+    <!--
     <repository>
       <id>production-snapshots</id>
       <url>https://central.sonatype.com</url>
@@ -62,6 +58,7 @@
       <id>production-snapshots</id>
       <url>https://central.sonatype.com/repository/maven-snapshots/</url>
     </snapshotRepository>
+    -->
   </distributionManagement>
 
   <build>
@@ -168,7 +165,7 @@
         <version>0.8.0</version>
         <extensions>true</extensions>
         <configuration>
-          <publishingServerId>staging-snapshots</publishingServerId>
+          <publishingServerId>production-snapshots</publishingServerId>
           <autoPublish>true</autoPublish>
           <waitUntil>uploaded</waitUntil>
         </configuration>
