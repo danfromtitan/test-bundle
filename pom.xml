@@ -4,7 +4,7 @@
 
   <groupId>io.github.danfromtitan</groupId>
   <artifactId>test-bundle</artifactId>
-  <version>1.1.19</version>
+  <version>1.0.93</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
@@ -31,7 +31,7 @@
     <connection>scm:git:git://github.com/danfromtitan/test-bundle.git</connection>
     <developerConnection>scm:git:ssh:github.com:danfromtitan/test-bundle.git</developerConnection>
     <url>https://github.com/danfromtitan/test-bundle.git</url>
-    <tag>${project.artifactId}-${project.version}</tag>
+    <tag>test-bundle-1.0.93</tag>
   </scm>
 
   <properties>
@@ -39,7 +39,6 @@
   </properties>
 
   <distributionManagement>
-    <!--
     <snapshotRepository>
       <id>staging-nxrm2-proxy</id>
       <url>https://staging.portal.central.sonatype.dev/repository/maven-snapshots/</url>
@@ -48,7 +47,7 @@
       <id>staging-nxrm2-proxy</id>
       <url>https://ossrh-staging-api.staging.portal.central.sonatype.dev/service/local/staging/deploy/maven2/</url>
     </repository>
-    -->
+    <!--
     <snapshotRepository>
       <id>production-nxrm2-proxy</id>
       <url>https://central.sonatype.com/repository/maven-snapshots/</url>
@@ -57,7 +56,7 @@
       <id>production-nxrm2-proxy</id>
       <url>https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/</url>
     </repository>
-
+    -->
   </distributionManagement>
 
   <build>
