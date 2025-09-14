@@ -4,7 +4,7 @@
 
   <groupId>io.github.danfromtitan</groupId>
   <artifactId>test-bundle</artifactId>
-  <version>1.0.94-SNAPSHOT</version>
+  <version>1.0.93</version>
   <packaging>jar</packaging>
 
   <name>test-bundle</name>
@@ -61,15 +61,15 @@
 
   <build>
     <plugins>
-      <!--
+
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
         <version>1.7.0</version>
         <extensions>true</extensions>
         <configuration>
-          <serverId>production-nxrm2-proxy</serverId>
-          <nexusUrl>https://ossrh-staging-api.central.sonatype.com/</nexusUrl>
+          <serverId>staging-nxrm2-proxy</serverId>
+          <nexusUrl>https://ossrh-staging-api.staging.portal.central.sonatype.dev/</nexusUrl>
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
         <dependencies>
@@ -80,7 +80,7 @@
           </dependency>
         </dependencies>
       </plugin>
-      -->
+
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -215,7 +215,7 @@
           </execution>
         </executions>
       </plugin>
-      -->
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
@@ -233,7 +233,7 @@
           </checkModificationExcludes>
         </configuration>
       </plugin>
-
+      -->
     </plugins>
   </build>
 
